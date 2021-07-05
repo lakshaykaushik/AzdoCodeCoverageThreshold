@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "CodeCoverageThresholds",
+    "name": "Code Coverage Thresholds",
+    "version": "1.0.0",
+    "publisher": "LakshayKaushik",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Lets you define code Coverage threshold on project level",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/codecoverage.png"        
+    },
+    "files": [
+        {
+            "path": "codecoveragethreshold"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "codecoveragethreshold"
+            }
+        }
+    ]
+}

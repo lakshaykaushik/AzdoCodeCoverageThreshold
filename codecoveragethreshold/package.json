@@ -1,0 +1,21 @@
+{
+  "name": "codecoveragethreshold",
+  "version": "1.0.0",
+  "description": "Extension which lets you set Code Cobverage threshold on per Project Basis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^3.1.4",
+    "xml2js": "^0.4.23",
+    "xml2json": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.60",
+    "@types/q": "^1.5.4",
+    "typescript": "^4.0.2"
+  }
+}
