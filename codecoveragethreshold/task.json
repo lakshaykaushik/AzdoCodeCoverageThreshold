@@ -10,7 +10,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 0
+        "Patch": 11
     },
     "instanceNameFormat": "codecoveragethreshold",
     "inputs": [
@@ -50,9 +50,9 @@
             "name": "coverageCalculation",
             "type": "string",
             "label": "coverageType",
-            "defaultValue": "line",
+            "defaultValue": "line-rate",
             "required": false,
-            "helpMarkDown": "CoverageCalculation, line or branch"
+            "helpMarkDown": "CoverageCalculation, line-rate or branch-rate"
         }
     ],
     "execution": {

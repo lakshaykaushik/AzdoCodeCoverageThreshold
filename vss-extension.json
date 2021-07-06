@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "CodeCoverageThresholds",
     "name": "Code Coverage Thresholds",
-    "version": "1.0.0",
+    "version": "1.0.11",
     "publisher": "LakshayKaushik",
     "targets": [
         {
