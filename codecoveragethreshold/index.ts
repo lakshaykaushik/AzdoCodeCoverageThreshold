@@ -25,11 +25,8 @@ async function run() {
                     var projectNames_array = projectNames?.split(',');
                     var projectThresholds_array = projectThresholds?.split(',').map(Number);
                     var belowThresholds =[];
-                    //console.log(convertedJson);
                     for(var i = 0; i < projectNames_array?.length; i++) {
-                        console.log(projectNames_array[i])
                         var objecttoCalculate = convertedJson.coverage.packages.package.find( (record: { name: string; }) => record.name === projectNames_array[i] )
-                        console.log(objecttoCalculate)
                             var coveragePercent = projectThresholds_array[i]/100;
                             if (coveragePercent < objecttoCalculate[coverageCalculation]){
                                 console.log("Coverage of " + projectNames_array[i] + " is " + objecttoCalculate[coverageCalculation]*100 + " percent"  + " which is above the defined threshold of " + projectThresholds_array[i] + " percent")
