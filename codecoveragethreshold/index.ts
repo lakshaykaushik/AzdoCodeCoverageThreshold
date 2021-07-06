@@ -26,8 +26,8 @@ async function run() {
                     var projectThresholds_array = projectThresholds?.split(',').map(Number);
                     var belowThresholds =[];
                     if (projectNames_array[0] == 'Overall'){
-                        console.log("Overall code coverage is: " + convertedJson.coverage[coverageCalculation] + ", threshold defined is: " + projectThresholds_array[0])
-                        if (projectThresholds_array[0] < convertedJson.coverage[coverageCalculation]){
+                        console.log("Overall code coverage is: " + convertedJson.coverage[coverageCalculation]*100 + ", threshold defined is: " + projectThresholds_array[0])
+                        if (projectThresholds_array[0] < convertedJson.coverage[coverageCalculation]*100){
                             tl.setResult(tl.TaskResult.Succeeded, 'Overall code coverage is below the defined threshold');
                         } else {
                             tl.setResult(tl.TaskResult.Failed, 'Overall code coverage is below the defined threshold'); 
