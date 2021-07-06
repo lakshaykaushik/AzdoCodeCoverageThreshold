@@ -55,7 +55,7 @@ Example:
     codeCoverageFormat: Cobertura
     coverageCalculation: line-rate
 
-
+```
 ## Build Process of the extension.
 
 Before building the extension, you need to have docker engine installed on your local machine or if you are doing a build in a CI pipeline, docker engine needs to be installed on the pipeline agent too. 
