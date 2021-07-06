@@ -25,6 +25,14 @@ async function run() {
                     var projectNames_array = projectNames?.split(',');
                     var projectThresholds_array = projectThresholds?.split(',').map(Number);
                     var belowThresholds =[];
+                    if (projectNames_array[0] == 'Overall'){
+                        console.log("Overall code coverage is: " + convertedJson.coverage[coverageCalculation] + ", threshold defined is: " + projectThresholds_array[0])
+                        if (projectThresholds_array[0] < convertedJson.coverage[coverageCalculation]){
+                            tl.setResult(tl.TaskResult.Succeeded, 'Overall code coverage is below the defined threshold');
+                        } else {
+                            tl.setResult(tl.TaskResult.Failed, 'Overall code coverage is below the defined threshold'); 
+                        }
+                    } else {
                     for(var i = 0; i < projectNames_array?.length; i++) {
                         var objecttoCalculate = convertedJson.coverage.packages.package.find( (record: { name: string; }) => record.name === projectNames_array[i] )
                             var coveragePercent = projectThresholds_array[i]/100;
@@ -40,8 +48,11 @@ async function run() {
                      console.log(belowThresholds[k])
                     }
                     tl.setResult(tl.TaskResult.Failed, 'Code coverage of above project(s) is below the defined threshold');
+                } else {
+                    tl.setResult(tl.TaskResult.Succeeded, 'Code coverage of project(s) is above the defined thresholds');
                 }
             }
+        }
                 else {
                     console.log(error);
                     tl.setResult(tl.TaskResult.Failed, 'Failed Parsing Cobertura XML');
