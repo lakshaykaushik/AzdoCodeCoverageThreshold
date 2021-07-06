@@ -4,12 +4,25 @@
     "name": "Code Coverage Thresholds",
     "version": "1.0.11",
     "publisher": "LakshayKaushik",
+    "public": true,
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/lakshaykaushik/AzdoCodeCoverageThreshold"
+    },
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
     "description": "Lets you define code Coverage threshold on project level",
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
     "categories": [
         "Azure Pipelines"
     ],
