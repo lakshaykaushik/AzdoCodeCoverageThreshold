@@ -20,7 +20,14 @@ Publisher: LakshayKaushik
 
 
 ### 2.Select codecoveragethreshold task from pipeline tasks.
-![image](https://user-images.githubusercontent.com/29423983/124550800-dc505680-de4e-11eb-8dfc-e6b484e65406.png)
+```
+- task: codecoveragethreshold@1
+  inputs:
+    projectNames: 'project1,project2,project3'
+    projectThresholds: '10,15,20'
+    codeCoverageFile: 'Cobertura.xml'
+    codeCoverageFormat: Cobertura
+    coverageCalculation: line-rate```
 
 * projectNames: Accepts either 'Overall' or a comma seperated list of all projects for which code coverage threshold needs to be defined.
 * projectThresholds: Accepts a comma seperated list of threshold values for projects. Index 0 of this list corresponds to index 0 of projectNames list. 
@@ -29,8 +36,6 @@ Publisher: LakshayKaushik
 * coverageCalculation: Code coverage calculation mechanism. Both line-rate and branch-rate are supported.
 
 
-Example:
-![image](https://user-images.githubusercontent.com/29423983/124551289-8a5c0080-de4f-11eb-8af4-48156484fe63.png)
 
 ### 3. Now, use the task in your pipeline.
 
